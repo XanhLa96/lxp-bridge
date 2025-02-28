@@ -1,3 +1,7 @@
+# 0.2.0 - 28th 02 2025
+
+* a version of xanhla custom
+
 # 0.13.0 - 27th October 2023
 
 * **BREAKING CHANGE**: Simplify scheduler.timesync configuration to appease HA (#209)
