@@ -651,6 +651,7 @@ pub enum Register {
 pub enum RegisterBit {
     // Register 21
     AcChargeEnable = 1 << 7,
+    SetToStandbyEnable = 1 << 9,
     ForcedDischargeEnable = 1 << 10,
     ChargePriorityEnable = 1 << 11,
 }
@@ -667,7 +668,7 @@ pub struct Register21Bits {
     pub grid_on_power_ss_en: String,
     pub ac_charge_en: String,
     pub sw_seamless_en: String,
-    pub set_to_standby: String,
+    pub set_to_standby_en: String,
     pub forced_discharge_en: String,
     pub charge_priority_en: String,
     pub iso_en: String,
@@ -696,7 +697,7 @@ impl Register21Bits {
             grid_on_power_ss_en: Self::is_bit_set(data, 1 << 6),
             ac_charge_en: Self::is_bit_set(data, 1 << 7),
             sw_seamless_en: Self::is_bit_set(data, 1 << 8),
-            set_to_standby: Self::is_bit_set(data, 1 << 9),
+            set_to_standby_en: Self::is_bit_set(data, 1 << 9),
             forced_discharge_en: Self::is_bit_set(data, 1 << 10),
             charge_priority_en: Self::is_bit_set(data, 1 << 11),
             iso_en: Self::is_bit_set(data, 1 << 12),
@@ -711,7 +712,7 @@ impl Register21Bits {
 #[derive(Clone, Debug, Serialize)]
 pub struct Register110Bits {
     pub ub_pv_grid_off_en: String,
-    pub ub_run_without_grid: String,
+    pub ub_run_without_grid_en: String,
     pub ub_micro_grid_en: String,
 }
 impl Register110Bits {
@@ -726,7 +727,7 @@ impl Register110Bits {
     pub fn new(data: u16) -> Self {
         Self {
             ub_pv_grid_off_en: Self::is_bit_set(data, 1 << 0),
-            ub_run_without_grid: Self::is_bit_set(data, 1 << 1),
+            ub_run_without_grid_en: Self::is_bit_set(data, 1 << 1),
             ub_micro_grid_en: Self::is_bit_set(data, 1 << 2),
         }
     }
