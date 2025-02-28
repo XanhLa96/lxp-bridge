@@ -635,6 +635,7 @@ impl Config {
             self.switch("ac_charge", "AC Charge")?,
             self.switch("charge_priority", "Charge Priority")?,
             self.switch("forced_discharge", "Forced Discharge")?,
+            self.switch("set_to_standby", "Set To Standby")?,
             self.number_percent(Register::ChargePowerPercentCmd, "System Charge Rate (%)")?,
             self.number_percent(Register::DischgPowerPercentCmd, "System Discharge Rate (%)")?,
             self.number_percent(Register::AcChargePowerCmd, "AC Charge Rate (%)")?,
