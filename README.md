@@ -16,4 +16,4 @@ You can use pre-built images from here: https://hub.docker.com/r/celsworth/lxp-b
 
 ## Documentation
 
-Full documentation is now in the [Wiki](https://github.com/celsworth/lxp-bridge/wiki).
+Full documentation is now in the [Wiki](https://github.com/XanhLa96/lxp-bridge/wiki).
