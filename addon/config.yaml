@@ -1,6 +1,6 @@
-name: lxp-bridge ddev
+name: lxp-bridge
 version: v0.2.0
-slug: lxp-bridge ddev
+slug: lxp-bridge
 description: lxp-bridge for lux inverters
 arch:
 - armv7
