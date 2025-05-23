@@ -1,7 +1,7 @@
-name: lxp-bridge ddev
-version: v0.2.1
-slug: lxp-bridge ddev
-description: Version of Xanhla
+name: lxp-bridge (xanhla version)
+version: dev
+slug: lxp-bridge-dev
+description: Allows local communication with Luxpower inverters and bridges it to MQTT
 arch:
 - armv7
 - aarch64
@@ -27,15 +27,18 @@ options:
     enabled: true
     host: core-mosquitto.local.hass.io
     port: 1883
-    username: vanduan96
+    username: ""
     password: ""
-    namespace: lxp
+    namespace: lxp1
   influx:
     enabled: false
     url: "http://localhost:8086"
-    username: ""
+    username: vanduan96
     password: ""
     database: "lxp"
+  scheduler:
+    enabled: yes
+    timesync_cron: "0 0 * * *"
 schema:
   loglevel: list(trace|debug|info|warn|error|off)
   inverters:
@@ -62,3 +65,6 @@ schema:
     username: str
     password: password
     database: str
+  scheduler:
+    enabled: bool
+    timesync_cron: str
