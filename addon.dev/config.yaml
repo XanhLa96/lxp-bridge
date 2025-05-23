@@ -27,7 +27,7 @@ options:
     enabled: true
     host: core-mosquitto.local.hass.io
     port: 1883
-    username: ""
+    username: vanduan96
     password: ""
     namespace: lxp1
   influx:
