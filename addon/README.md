@@ -1,5 +1,5 @@
 # Home Assistant addon: lxp-bridge
-
+# Xanhla96
 Allows local communication with Luxpower inverters and bridges to MQTT.
 
 ![Supports aarch64 Architecture][aarch64-shield] ![Supports amd64 Architecture][amd64-shield] ![Supports armv7 Architecture][armv7-shield]
