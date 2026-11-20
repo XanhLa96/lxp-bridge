@@ -1,4 +1,4 @@
-ARG BUILD_VERSION=v0.2.1
+ARG BUILD_VERSION=v0.11.0
 FROM celsworth/lxp-bridge:${BUILD_VERSION} AS lxp-bridge
 
 FROM ghcr.io/home-assistant/base:latest
