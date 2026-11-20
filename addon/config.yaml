@@ -1,6 +1,6 @@
 name: lxp-bridge ddev
 version: v0.2.1
-slug: lxp-bridge ddev
+slug: lxp-bridge-ddev
 description: Version of Xanhla
 arch:
 - armv7
