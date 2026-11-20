@@ -1,14 +1,10 @@
-ARG BUILD_VERSION
-ARG BUILD_FROM
+ARG BUILD_VERSION=dev
+FROM celsworth/lxp-bridge:${BUILD_VERSION} AS lxp-bridge
 
-FROM XanhLa96/lxp-bridge:${BUILD_VERSION} AS lxp-bridge
-
-FROM $BUILD_FROM
+FROM ghcr.io/home-assistant/base:latest
 COPY --from=lxp-bridge / /
 
-RUN echo "$MIRROR/alpine/edge/community" >> /etc/apk/repositories
-RUN apk update
-RUN apk add yq
+RUN apk add --no-cache yq-go
 
 COPY run.sh /
 RUN chmod a+x /run.sh
